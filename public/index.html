@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Sports Survey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Sports Survey</h1>
+    <p>Tell us about your sports habits!</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Submit Your Survey</h2>
+      <form id="surveyForm">
+        <input name="name" placeholder="Your Name" required />
+        <input name="age" type="number" placeholder="Your Age" required />
+
+        <input name="sport" placeholder="Favorite Sport" required />
+        <input name="player" placeholder="Your Favorite Player" required />
+
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender" required>
+          <option value="" disabled selected>Select gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+          <option value="Prefer not to say">Prefer not to say</option>
+        </select>
+
+        <label for="frequency">How often do you play sports?</label>
+        <select name="frequency" id="frequency" required>
+          <option value="" disabled selected>Select frequency</option>
+          <option value="Never">Never</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="Often">Often</option>
+          <option value="Always">Always</option>
+        </select>
+
+        <label>Would you recommend sports to others?</label>
+        <div>
+          <input type="radio" id="recYes" name="recommend" value="Yes" required />
+          <label for="recYes">Yes</label>
+          <input type="radio" id="recNo" name="recommend" value="No" />
+          <label for="recNo">No</label>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Survey Results</h2>
+      <ul id="surveyResults"></ul>
+    </section>
+
+    <section>
+      <h2>Popular Sports</h2>
+      <ul id="popularSports"></ul>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
